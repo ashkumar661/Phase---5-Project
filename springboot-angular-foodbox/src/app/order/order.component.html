@@ -1,0 +1,43 @@
+<div class="main-heading">
+    <h2>Order History</h2>
+</div>
+<table>
+    <thead>
+        <tr>
+            <th>Order Id</th>
+            <th>Order Date</th>
+            <th>Total</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let order of orders">
+            <td>{{order.id}}</td>
+            <td>{{order.createdDate}}</td>
+            <td>{{order.totalPrice}}</td>
+            <td>Completed</td>
+            <td>
+                <button (click)="oderDetail(order.id)" class="btn btn-info">View Details</button>
+                &nbsp;
+            </td>
+        </tr>
+    </tbody>
+</table>
+<h3 class="main-heading">Order Summary</h3>
+<table>
+    <thead>
+        <tr>
+            <th>Product Name</th>
+            <th>Quantity</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let cartItem of cart">
+            <td>{{cartItem.productName}}</td>
+            <td>{{cartItem.quantity}} </td>
+            <td>{{cartItem.price}}</td>
+        </tr>
+    </tbody>
+</table>

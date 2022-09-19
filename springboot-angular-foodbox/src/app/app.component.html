@@ -1,0 +1,28 @@
+<div class="main-container">
+    <nav class="nav-container">
+        <a class="nav-logo" routerLink="dashboard">FoodBox</a>
+        <ul class="nav-item">
+            <li *ngIf="isShow">
+                <a class="" routerLink="admin"  routerLinkActive="active">Admin</a>
+            </li>
+            <li *ngIf="!loginCheck; else elsePart">
+                <a class="" routerLink="login" routerLinkActive="active">Login</a>
+            </li>
+            <ng-template #elsePart>
+                <li>
+                    <a class="" (click)="logOut()">Logout</a>
+                </li>
+            </ng-template>
+            <li>
+                <a class="" routerLink="order" routerLinkActive="active">Order</a>
+            </li>
+            <li>
+                <a class="" routerLink="cart" routerLinkActive="active">Cart</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="main-containt">
+        <router-outlet></router-outlet>
+    </div>
+    <footer class="footer-container"><span>All Rights Reserved 2022 @FoodStory</span></footer>
+</div>

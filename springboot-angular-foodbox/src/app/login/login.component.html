@@ -1,0 +1,23 @@
+<div class="login-container">
+    <form class="lc-items">
+        <!-- Email input -->
+        <div class="input-container">
+            <label class="input-label" for="userEmail">Email address</label>
+            <input type="email" [(ngModel)]="email" name="userEmail" placeholder="Enter your email ID" class="input-content" required/>
+        </div>
+
+        <!-- Password input -->
+        <div class="input-container">
+            <label class="input-label" for="userParssowrd">Password</label>
+            <input type="password" [(ngModel)]="password" name="userParssowrd" placeholder="Enter your password" class="input-content" />
+        </div>
+
+        <!-- Submit button -->
+        <button type="button" (click)="loginUserCheck()" class="btn btn-info submit-btn">Sign in</button>
+
+        <!-- Register buttons -->
+        <div class="text-center">
+            <p>Not a member? <a routerLink="../Register">Register</a></p>
+        </div>
+    </form>
+</div>

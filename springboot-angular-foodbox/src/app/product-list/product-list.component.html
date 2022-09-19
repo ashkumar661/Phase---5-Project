@@ -1,0 +1,25 @@
+            <div class="main-heading">
+                <h2>Menu</h2>
+            </div>
+            <table class="">
+                <thead>
+                    <tr>
+                        <th>Product Name</th>
+                        <th>Product Category</th>
+                        <th>Product Description</th>
+                        <th>Price</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let product of products">
+                        <td>{{product.productName}}</td>
+                        <td>{{product.category}}</td>
+                        <td>{{product.description}}</td>
+                        <td>{{product.price}}</td>
+                        <td>
+                            <button (click)="addToCart(product.productId)" class="btn btn-info">Add to Cart</button> &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>

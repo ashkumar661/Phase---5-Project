@@ -1,0 +1,8 @@
+export class Cart{
+    cartId:number;
+	productId:number;
+    userId:number;
+	productName:string;
+    quantity:number;
+    price:number; 
+}

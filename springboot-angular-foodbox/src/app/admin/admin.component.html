@@ -1,0 +1,29 @@
+<div class="main-heading">
+    <h2>Menu</h2>
+    <button (click)="addProduct()" class="btn btn-info">Add new Product</button>
+</div>
+<table>
+    <thead>
+        <tr>
+            <th>Product Name</th>
+            <th>Product Category</th>
+            <th>Product Description</th>
+            <th>Price</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products">
+            <td>{{product.productName}}</td>
+            <td>{{product.category}}</td>
+            <td>{{product.description}}</td>
+            <td>{{product.price}}</td>
+            <td>
+                <button (click)="updateProduct(product.productId)" class="btn btn-info">Edit</button> &nbsp;
+                <button routerLink="/reload" (click)="deleteProduct(product.productId)"
+                    class="btn btn-info">Delete</button> &nbsp;
+            </td>
+        </tr>
+    </tbody>
+</table>
+

@@ -1,0 +1,29 @@
+<div class="main-heading">
+    <h2>Menu</h2>
+    <button (click)="checkOut()" class="btn btn-info">Checkout</button>
+</div>
+<table>
+    <thead>
+        <tr>
+            <th>Product Name</th>
+            <th class="input-xm">Quantity</th>
+            <th>Price</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let cartItem of cart">
+            <td>{{cartItem.productName}}</td>
+            <td>
+                <button class="btn btn-info" (click)="decreaseQty(cartItem)">-</button>
+                <input type="text" class="input-xm" name="itemQtyTextBox" id="itemQtyTextBox" disabled value={{cartItem.quantity}}>
+                <button class="btn btn-info" (click)="increaseQty(cartItem)">+</button>
+            </td>
+            <td>{{cartItem.price}}</td>
+            <td>
+                <button (click)="deleteCartItem(cartItem.cartId)" class="btn btn-info">Delete</button>
+                &nbsp;
+            </td>
+        </tr>
+    </tbody>
+</table>

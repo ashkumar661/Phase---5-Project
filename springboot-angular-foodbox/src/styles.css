@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@400;500;600;700&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --clr-black: #181818;
+    --clr-purple: #8758FF;
+    --clr-white: #FFFFFF;
+    --clr-grey: #F2F2F2;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: Lato;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+/* main styles for layouting only */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main-containt {
+    flex-grow: 1;
+
+    display: flex;
+    justify-content: center;
+}
+/* --------------------------------------- */
+/* nav styles */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 3rem;
+    background-color: var(--clr-black);
+}
+
+.nav-container a {
+    text-decoration: none;
+    color: var(--clr-white);
+    padding: 0.5rem 1rem;
+}
+
+.nav-item {
+    text-decoration: none;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-item a:hover {
+    color: #8758FF;
+
+}
+/* --------------------------------- */
+
+/* footer styles */
+.footer-container {
+    padding: 1rem;
+    color: var(--clr-white);
+    background-color: var(--clr-black);
+    text-align: center;
+}
+/* --------------------------------- */
+
+/* pages styles */
+.main-heading {
+    text-align: center;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--clr-purple);
+    margin: 1rem 0;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 1rem auto;
+}
+
+td, th {
+    padding: 0.5rem 1rem;
+}
+
+thead tr {
+    background-color: black;
+    color: var(--clr-white);
+}
+
+tbody tr:nth-child(odd){
+    background-color: var(--clr-grey);
+}
+
+tbody tr:nth-child(even){
+    background-color: var(--clr-white);
+}
+
+.btn {
+    padding: 0.5rem 1.2rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn-info {
+    background-color: #8758ff36;
+}
+
+.btn:hover {
+    background-color: var(--clr-purple);
+    color: var(--clr-white);
+}
+
+.login-container {
+    height: calc(100vh - 98.4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.lc-items {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-label {
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+}
+
+.input-content {
+    border: 1px solid var(--clr-black);
+    border-radius: 5px;
+    padding: 0.5rem 1.2rem;
+    margin-bottom: 1rem;
+}
+.input-content:hover,
+.input-content:active {
+    border: 1px solid var(--clr-purple);
+    outline: inherit;
+}
+
+.submit-btn {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    padding: 0.8rem 0;
+    margin-bottom: 1rem;
+}
+
+.input-xm {
+    width: 25%;
+}
+/* ---------------------------------- */
